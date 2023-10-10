@@ -1,0 +1,99 @@
+<button
+  onClick="GetQuotes(this)"
+  target-all='{{product | json }}'
+  id="quotes"
+  metafiledNew='{{app.metafields.quotes-app.admin-form-display.value}}'
+  metafiledToken='{{app.metafields.quotes-app.admin-form-token.value}}'
+  metafieldForm='{{app.metafields.quotes-app.form-fields.value}}'
+  metafiledLabel='{{app.metafields.quotes-app.label-setting.value}}'
+  gridSettings='{{app.metafields.quotes-app.grid-setting.value}}'
+  subscription='{{app.metafields.quotes-app.subscription.value}}'
+  metafiledNew1='{{app.metafields.quotes-app.customer-form-display.value}}'>Add to Quote
+</button>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+  const shopDomain = '{{shop.domain}}'
+  let position = shopDomain.search(".myshopify.com")
+  const shopName = shopDomain.substring(0, position)
+
+  let arr = []
+  arr.push({shop_name: shopName, shop_domain: shopDomain, shop_email:'{{shop.email}}'})
+
+
+  localStorage.setItem("shop", JSON.stringify(arr))
+  const d = '{{app.metafields.quotes-app.priceCSS.value}}'
+  if (JSON.parse(d).Price === true) {
+    const nodeList = document.querySelectorAll(".price.price--large.price--on-sale.price--show-badge,.card-information");
+    for (let i = 0; i < nodeList.length; i++) {
+      nodeList[i].style.display = "none";
+    }
+  }
+
+  if (JSON.parse(d).Price === false) {
+    const nodeList = document.querySelectorAll(".price.price--large.price--on-sale.price--show-badge,.card-information");
+    for (let i = 0; i < nodeList.length; i++) {
+      nodeList[i].style.display = "show";
+    }
+  }
+  if (JSON.parse(d).AddToCart === true) {
+    let list = document.querySelector('button#ProductSubmitButton-template--19232627425579__main ').classList;
+    list.add("hide");
+  }
+  if (JSON.parse(d).AddToCart === false) {
+    let list = document.querySelector('button#ProductSubmitButton-template--19232627425579__main ').classList;
+    list.add("show");
+  }
+</script>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="main-Modal-form">
+      <div class="show-title"></div>
+      <div class="formController">
+        <form
+          id="formm"
+          action="/upload"
+          enctype="multipart/form-data"
+          method="POST"></form>
+      </div>
+    </div>
+    <div id="sucess-form-msg">
+      <img
+        src="{{ 'img.jpg' | asset_url }} "
+        width="150"
+        height="150"
+        id="thankimg">
+      <p>
+        Thank you for submitting a request a quote!
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Quote Button",
+    "target": "section",
+    "enabled_on": {
+      "templates": ["*"]
+    },
+    "stylesheet": "button.css",
+    "javascript": "buttons.js",
+    "settings": [
+      {
+        "label": "Color",
+        "id": "color",
+        "type": "color",
+        "default": "#000000"
+      }
+    ]
+  }
+{% endschema %}

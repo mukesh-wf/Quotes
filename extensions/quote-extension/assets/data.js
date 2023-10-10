@@ -1,0 +1,1 @@
+export const data=process.env.BACKEND_PORT 

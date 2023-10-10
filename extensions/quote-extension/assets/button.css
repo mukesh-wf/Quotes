@@ -1,0 +1,236 @@
+button#quotes {
+  width: 25rem;
+  height: 5rem;
+  color: white;
+  background-color: black
+}
+
+.modal {
+  display: none;
+   /* Hidden by default  */
+   /* overflow: hidden !important;  */
+  position: fixed;
+   /* Stay in place  */
+  z-index: 1;
+   /* Sit on top  */
+  left: 0;
+  top: -95px;
+  width: 100%;
+   /* Full width  */
+  height: 100%;
+   /* Full height  */
+  overflow: auto;
+   /* Enable scroll if needed  */
+  background-color: rgb(0, 0, 0);
+   /* Fallback color  */
+  background-color: rgba(0, 0, 0, 0.4);
+   /* Black w/ opacity  */
+}
+
+ /* Modal Content/Box  */
+.modal-content {
+  background-color: #fefefe;
+  margin: 9% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 65rem;
+}
+
+.col span {
+  margin-top: -20px;
+  font-size: 17px;
+}
+
+.col p {
+  font-size: 20px;
+}
+
+/* The Close Button  */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.show-image {
+  width: 30%;
+}
+
+/* .product-title{
+    display: flex;
+    justify-content: start;
+    margin-right: 15px;
+    width: 100%;
+  } */
+
+.main-product-show {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.main-product-show div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+/*  Create two equal columns that floats next to each other  */
+.row {
+  width: 100%;
+  padding: 10px;
+  height: 300px;
+  /*Should be removed. Only for demonstration */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+ /* Clear floats after the columns  */
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 50%;
+  margin-top: -83px;
+
+}
+.col h1 {
+  margin: 2px;
+}
+.col p {
+  margin: 2px;
+}
+
+.row img {
+  width: 370px;
+}
+
+.img {
+  width: 37%;
+}
+
+#m1{
+  resize: vertical;
+}
+.formm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#div1 ,#div2, #div3, #div4{
+  margin-top: 0px;
+  font-size: 14px;
+  align-items: center;
+  width: max-content;
+  padding: 0px;
+  margin-left: 113px;
+}
+
+
+.inputField {
+  width: 80%;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 4px;
+  float: right;
+  margin-bottom: 4px;
+}
+
+
+#sucess-form-msg{
+  top: 37% !important;
+  left: 35%;
+  height: 35rem;
+  width: 45rem;
+  position: absolute;
+  text-align: center;
+}
+
+#sucess-form-msg h1{
+  margin: 2px;
+}
+
+#msg{
+  font-size: 20px;
+}
+
+
+
+.formdesign {
+  font-size: 20px;
+  width: 51%;
+
+}
+
+.formdesign input {
+  width: 50%;
+  padding: 12px 20px;
+  border: 1px solid blue;
+  margin: 14px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.formerror {
+  color: red;
+}
+
+form#submitButton {
+  align-items: center;
+  display: block;
+   /* width: 101%;  */
+}
+
+.fieldCss{
+  width: 53%;
+}
+
+#submitBtn{
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 3px;
+  cursor: pointer;
+  margin-top: 2px;
+  margin-left: 109px;
+  font-size: 14px;
+}
+
+#submitBtn:hover{
+  background-color: white;
+  color: black;
+  border: 0.5px solid black;
+}
+.hidden {
+  display: none;   
+ 
+}
+.formController{
+  width: 100%;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+}
+

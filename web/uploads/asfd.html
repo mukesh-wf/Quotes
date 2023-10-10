@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div style="width:700px;margin:auto;">
+        <div>
+            <table style="width:100%;max-width:100%;margin-bottom:20px;font-size:16px;background:#00387f">
+                <thead>
+                    <tr>
+                        <th style="text-align:left">
+                            <div style="padding:15px">
+                                <div style="max-height:60px;max-width:100px;margin-right:auto">
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div style="margin:0 12px;color:#ffffff;text-align:center">
+                                <h2>Request a quote - Company Name</h2>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="padding:15px;background:#fbfbfb">
+            <div>
+                <table style="width:100%;max-width:100%;margin:20px 0;font-size:16px">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div style="display:flex">
+                                    <img src="https://img.icons8.com/?id=3225&format=png"
+                                        style="  width: 21px; height: 21px" alt="">
+                                    <span style="margin-left:15px">CUSTOMER INFORMATION</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="margin-left:38px">Create At: ${req.body.date}</div>
+                                {userArr.map((e)=>{
+                                return(
+
+                                <div style="margin-left:38px">${e.key}: ${e.value}</div>
+                                )
+                                })}
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table style="width:100%;max-width:100%;margin:20px 0;font-size:16px">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="https://img.icons8.com/?id=49&format=png" alt=""
+                                    style="width: 21px; height: 21px">
+                                <span style="margin-left:15px">QUOTE MESSAGE</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div> ${UserArr.message} </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <div style="font-size:18px;margin-top:24px">
+                Quote form information:
+            </div>
+            <div style="background:#fff;padding:10px">
+                <table style="width:100%;max-width:100%;margin-bottom:20px;font-size:16px">
+                    <tbody>
+                        <tr>
+                            <td style="border-top:1px solid #f1f1f6">
+                                <div style="display:flex">
+                                    <img src=${finalImage} alt="image-product"
+                                        style="max-width:120px;padding:15px 15px 15px 0">
+                                    <div>
+                                        <p style="font-weight:600">${product.title}</p>
+                                        ${message}
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+
+<!-- <div style="width:700px;margin:auto;">
+    <div>
+        <table style="width:100%;max-width:100%;margin-bottom:20px;font-size:16px;background:#00387f">
+            <thead>
+                <tr>
+                    <th style="text-align:left">
+                        <div style="padding:15px">
+                            <div style="max-height:60px;max-width:100px;margin-right:auto">
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div style="margin:0 12px;color:#ffffff;text-align:center">
+                            <h2>Request a quote - Company Name</h2>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div style="padding:15px;background:#fbfbfb">
+        <div>
+          
+            <table style="width:100%;max-width:100%;margin:20px 0;font-size:16px">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div style="display:flex">
+                                <img src="https://img.icons8.com/?id=3225&format=png" style="  width: 21px; height: 21px" alt="" >
+                                    <span style="margin-left:15px">CUSTOMER INFORMATION</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <div style="margin-left:38px">Create At: ${req.body.date}</div>
+                        
+                            <div style="margin-left:38px">Name: ${UserArr.name}</div>
+                             <div style="margin-left:38px">Email: <a href="mailto:${UserArr.email} target="_blank">${UserArr.email}</a></div>
+                             <div style="margin-left:38px">Mob: ${UserArr.phoneNumber}</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table style="width:100%;max-width:100%;margin:20px 0;font-size:16px">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://img.icons8.com/?id=49&format=png" alt="" style="width: 21px; height: 21px"  >
+                            <span style="margin-left:15px">QUOTE MESSAGE</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <div> ${UserArr.message} </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <div style="font-size:18px;margin-top:24px">
+                Quote form information:
+            </div>
+            <div style="background:#fff;padding:10px">
+                <table style="width:100%;max-width:100%;margin-bottom:20px;font-size:16px">
+                    <tbody> <tr>
+                        <td style="border-top:1px solid #f1f1f6">
+                            <div style="display:flex">
+                                <img src=${finalImage} alt="image-product" style="max-width:120px;padding:15px 15px 15px 0">
+                                    <div>
+                                        <p style="font-weight:600">${product.title}</p>
+                                        ${message}</div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
+        </div>
+
+
+
+        <div style="margin-left:38px">Email: <a href="mailto:${UserArr.email} target="
+            _blank">${UserArr.email}</a></div>
+    <div style="margin-left:38px">Mob: ${UserArr.phoneNumber}</div> 
+
+   const newArr = UserArr.map(myFun)
+document.getElementById("show-items").innerHTML= newArr;
+
+        function myFun(data,index){
+          var items = "<div style='margin-left:38px'><b>"+data.key+":</b> "+data.value+" </div>"
+          return items;
+        }
+
+-->
+<table style="width:100%;max-width:100%;margin:20px 0;font-size:16px">
+    <tbody>
+        <tr>
+            <td>
+                <img src="https://img.icons8.com/?id=49&format=png" alt=""
+                    style="width: 21px; height: 21px">
+                <span style="margin-left:15px">QUOTE MESSAGE</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div> ${UserArr.message} </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
