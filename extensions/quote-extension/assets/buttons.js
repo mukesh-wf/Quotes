@@ -2,7 +2,7 @@ const BACKEND_PORT = "http://localhost:5000"
 let productResult
 let data = [];
 let userInfo = []
-let getData = []
+let getData = [];
 var modal = document.getElementById('myModal');
 var span = document.getElementsByClassName("close")[0];
 let ModalForm = document.getElementById('main-Modal-form')
